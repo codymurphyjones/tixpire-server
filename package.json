@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "private": true,
+  "main": "./dist/"
   "scripts": {
     "transpile": "babel ./src/ --out-dir dist",
     "build": "npm-run-all clean transpile",
