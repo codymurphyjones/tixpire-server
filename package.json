@@ -9,7 +9,7 @@
     "server": "node ./src/test.js $PORT",
     "dev": "npm-run-all build server",
     "clean": "rimraf dist",
-	"postinstall": "npm-run-all clean transpile"
+    "postinstall": "npm-run-all clean transpile"
   },
   "keywords": [],
   "author": "",
@@ -45,5 +45,7 @@
       "add-module-exports"
     ]
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
