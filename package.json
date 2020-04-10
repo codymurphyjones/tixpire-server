@@ -1,0 +1,47 @@
+{
+  "name": "tixpire-server",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "transpile": "babel ./src/ --out-dir dist",
+    "build": "npm-run-all clean transpile",
+    "server": "node ./src/test.js $PORT",
+    "dev": "npm-run-all build server",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase": "^7.14.0",
+    "hubspot": "^2.3.9",
+    "lodash": "^4.17.15",
+    "next": "^9.3.4",
+    "nodemon": "^2.0.3",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ]
+  }
+}
