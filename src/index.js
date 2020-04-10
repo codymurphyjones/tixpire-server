@@ -44,13 +44,10 @@ server.route('/api*').all(function (req, res) {
   })
 }
 
-export const Utilities = {
+export const Utils = {
 	...utils
 }
 
-
-
-export default function init (handle) {
-	
+export const RunServer = (handle) => {
 	return () => runServer(handle);
 }
