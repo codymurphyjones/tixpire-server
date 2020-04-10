@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "description": "",
   "main": "dist/main.js",
+  "module": "dist/main.js",
   "scripts": {
     "transpile": "babel ./src/ --out-dir dist",
     "build": "npm-run-all clean transpile",
     "server": "node ./src/test.js $PORT",
     "dev": "npm-run-all build server",
     "clean": "rimraf dist",
-	"postinstall": "npm-run-all clean transpile"
+    "postinstall": "npm-run-all clean transpile"
   },
   "keywords": [],
   "author": "",
@@ -35,7 +36,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rimraf": "^3.0.2",
-	"babel-plugin-add-module-exports": "^1.0.2"
+    "babel-plugin-add-module-exports": "^1.0.2"
   },
   "babel": {
     "presets": [
@@ -45,5 +46,7 @@
       "add-module-exports"
     ]
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
