@@ -6,6 +6,7 @@ const port = process.argv[2].replace("$PORT", "3000");;
 const api = require("./api");
 const ticketing = require("./ticketing");
 const bodyParser = require('body-parser');
+const utils = require('./utils');
 
 function runServer(handle) {
  console.log("Starting");
@@ -42,6 +43,12 @@ server.route('/api*').all(function (req, res) {
     console.log('> Ready on http://localhost:3000');
   })
 }
+
+export const Utilities = {
+	...utils
+}
+
+
 
 export default function init (handle) {
 	

@@ -1,4 +1,5 @@
 
 import * as firebase from "./firebase"
+import hubspot from "./hubspot"
 
-export default firebase;
+export default {hubspot, ...firebase} ;
