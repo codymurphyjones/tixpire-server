@@ -1,5 +1,5 @@
 
-const mainModule = require("./src");
+const mainModule = require("./dist");
 
 
-export default mainModule;
+module.exports = mainModule;
