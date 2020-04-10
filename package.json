@@ -2,8 +2,7 @@
   "name": "tixpire-server",
   "version": "0.0.1",
   "description": "",
-  "private": true,
-  "main": "./dist/"
+  "main": "dist/main.js",
   "scripts": {
     "transpile": "babel ./src/ --out-dir dist",
     "build": "npm-run-all clean transpile",
@@ -44,5 +43,6 @@
     "plugins": [
       "add-module-exports"
     ]
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
