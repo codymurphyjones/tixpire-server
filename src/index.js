@@ -30,11 +30,11 @@ server.route('/api*').all(function (req, res) {
     return api(req,res);
   })
     
-  server.get('*', (req, res) => {
+  server.get('/*', (req, res) => {
     return handle(req, res)
   })
   
-  server.post('*', (req, res) => {
+  server.post('/*', (req, res) => {
     return handle(req, res)
   })
 
