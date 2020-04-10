@@ -8,7 +8,8 @@
     "build": "npm-run-all clean transpile",
     "server": "node ./src/test.js $PORT",
     "dev": "npm-run-all build server",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+	"postinstall": "npm-run-all clean transpile"
   },
   "keywords": [],
   "author": "",
