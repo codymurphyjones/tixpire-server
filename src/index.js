@@ -2,13 +2,12 @@ const express = require('express')
 //const next = require('next')
 const cors = require('cors')
 const dev = process.env.NODE_ENV !== 'production'
-const port = process.argv[2].replace("$PORT", "3000");;
 const api = require("./api");
 const ticketing = require("./ticketing");
 const bodyParser = require('body-parser');
 const utils = require('./utils');
 
-function runServer(handle) {
+function runServer(handle, port) {
  console.log("Starting");
   const server = express()
   console.log("Server init");
@@ -48,6 +47,6 @@ export const Utils = {
 	...utils
 }
 
-export const RunServer = (handle) => {
-	return () => runServer(handle);
+export const RunServer = (handle, port) => {
+	return () => runServer(handle, port);
 }
