@@ -9,6 +9,10 @@ const utils = require('./utils');
 
 function runServer(handle, port) {
  console.log("Starting");
+ try {
+	 console.log(process.env.TESTVALUE);
+ }
+ catch(e){}
   const server = express()
   console.log("Server init");
   server.options('*', cors()) 
