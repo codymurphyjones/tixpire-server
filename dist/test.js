@@ -1,6 +1,5 @@
 "use strict";
 
-var dev = process.env.NODE_ENV !== 'production';
 var port = process.argv[2].replace("$PORT", "3000");
 ;
 

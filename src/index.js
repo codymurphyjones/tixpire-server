@@ -1,4 +1,4 @@
-const express = require('express')
+/*const express = require('express')
 //const next = require('next')
 const cors = require('cors')
 const dev = process.env.NODE_ENV !== 'production'
@@ -45,7 +45,7 @@ server.route('/api*').all(function (req, res) {
     if (err) throw err
     console.log('> Ready on http://localhost:' + port);
   })
-}
+}*/
 
 export const Utils = {
 	...utils
