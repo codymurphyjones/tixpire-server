@@ -1,6 +1,6 @@
 const port = process.argv[2].replace("$PORT", "3000");;
-const {RunServer} = require("../dist/");
-
+const {RunServer, Utils} = require("../dist/");
+console.log(Utils);
 console.log(RunServer);
 
 function handler(req, res) {
