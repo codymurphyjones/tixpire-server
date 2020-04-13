@@ -14,6 +14,11 @@ export default function runServer(handle, port) {
   server.options('*', cors()) 
   server.use(bodyParser.json());
   server.use(express.static('public'));
+  try {
+	 console.log(process.env.TESTVALUE);
+	}
+	catch(e) {
+	}
   
 server.route('/ticketing/*').all(function (req, res) {
     // runs for all HTTP verbs first

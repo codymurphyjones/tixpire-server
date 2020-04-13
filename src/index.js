@@ -6,7 +6,8 @@ const api = require("./api");
 const ticketing = require("./ticketing");
 const bodyParser = require('body-parser');
 const utils = require('./utils');
-
+const runServer = require("./runServer.js");
+/*
 function runServer(handle, port) {
  console.log("Starting");
  try {
@@ -45,7 +46,7 @@ server.route('/api*').all(function (req, res) {
     if (err) throw err
     console.log('> Ready on http://localhost:' + port);
   })
-}
+}*/
 
 export const Utils = {
 	...utils

@@ -26,39 +26,48 @@ var bodyParser = require('body-parser');
 
 var utils = require('./utils');
 
+var runServer = require("./runServer.js");
+/*
 function runServer(handle, port) {
-  console.log("Starting");
-
-  try {
-    console.log(process.env.TESTVALUE);
-  } catch (e) {}
-
-  var server = express();
+ console.log("Starting");
+ try {
+	 console.log(process.env.TESTVALUE);
+ }
+ catch(e){}
+  const server = express()
   console.log("Server init");
-  server.options('*', cors());
+  server.options('*', cors()) 
   server.use(bodyParser.json());
-  server.use(express["static"]('public'));
-  server.route('/ticketing/*').all(function (req, res) {
+  server.use(express.static('public'));
+  
+server.route('/ticketing/*').all(function (req, res) {
     // runs for all HTTP verbs first
     // think of it as route specific middleware!
-    return ticketing(req, res);
-  });
-  server.route('/api*').all(function (req, res) {
+    
+    return ticketing(req,res);
+  })
+  
+  
+server.route('/api*').all(function (req, res) {
     // runs for all HTTP verbs first
     // think of it as route specific middleware!
-    return api(req, res);
-  });
-  server.get('*', function (req, res) {
-    return handle(req, res);
-  });
-  server.post('*', function (req, res) {
-    return handle(req, res);
-  });
-  server.listen(port, function (err) {
-    if (err) throw err;
+    return api(req,res);
+  })
+    
+  server.get('*', (req, res) => {
+    return handle(req, res)
+  })
+  
+  server.post('*', (req, res) => {
+    return handle(req, res)
+  })
+
+  server.listen(port, (err) => {
+    if (err) throw err
     console.log('> Ready on http://localhost:' + port);
-  });
-}
+  })
+}*/
+
 
 var Utils = _objectSpread({}, utils);
 
