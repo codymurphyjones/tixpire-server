@@ -5,7 +5,6 @@ module.exports = {
     api: './src/api/index.js'
   },
   output: {
-	module: true,
     filename: '[name].js',
     path: __dirname + '/dist'
   },
