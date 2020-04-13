@@ -11,54 +11,55 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-/*const express = require('express')
-//const next = require('next')
-const cors = require('cors')
-const dev = process.env.NODE_ENV !== 'production'
-const api = require("./api");
-const ticketing = require("./ticketing");
-const bodyParser = require('body-parser');
-const utils = require('./utils');
+var express = require('express'); //const next = require('next')
+
+
+var cors = require('cors');
+
+var dev = process.env.NODE_ENV !== 'production';
+
+var api = require("./api");
+
+var ticketing = require("./ticketing");
+
+var bodyParser = require('body-parser');
+
+var utils = require('./utils');
 
 function runServer(handle, port) {
- console.log("Starting");
- try {
-	 console.log(process.env.TESTVALUE);
- }
- catch(e){}
-  const server = express()
-  console.log("Server init");
-  server.options('*', cors()) 
-  server.use(bodyParser.json());
-  server.use(express.static('public'));
-  
-server.route('/ticketing/*').all(function (req, res) {
-    // runs for all HTTP verbs first
-    // think of it as route specific middleware!
-    
-    return ticketing(req,res);
-  })
-  
-  
-server.route('/api*').all(function (req, res) {
-    // runs for all HTTP verbs first
-    // think of it as route specific middleware!
-    return api(req,res);
-  })
-    
-  server.get('*', (req, res) => {
-    return handle(req, res)
-  })
-  
-  server.post('*', (req, res) => {
-    return handle(req, res)
-  })
+  console.log("Starting");
 
-  server.listen(port, (err) => {
-    if (err) throw err
+  try {
+    console.log(process.env.TESTVALUE);
+  } catch (e) {}
+
+  var server = express();
+  console.log("Server init");
+  server.options('*', cors());
+  server.use(bodyParser.json());
+  server.use(express["static"]('public'));
+  server.route('/ticketing/*').all(function (req, res) {
+    // runs for all HTTP verbs first
+    // think of it as route specific middleware!
+    return ticketing(req, res);
+  });
+  server.route('/api*').all(function (req, res) {
+    // runs for all HTTP verbs first
+    // think of it as route specific middleware!
+    return api(req, res);
+  });
+  server.get('*', function (req, res) {
+    return handle(req, res);
+  });
+  server.post('*', function (req, res) {
+    return handle(req, res);
+  });
+  server.listen(port, function (err) {
+    if (err) throw err;
     console.log('> Ready on http://localhost:' + port);
-  })
-}*/
+  });
+}
+
 var Utils = _objectSpread({}, utils);
 
 exports.Utils = Utils;

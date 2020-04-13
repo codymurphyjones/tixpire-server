@@ -7,12 +7,8 @@ const ticketing = require("./ticketing");
 const bodyParser = require('body-parser');
 const utils = require('./utils');
 
-function runServer(handle, port) {
+export default function runServer(handle, port) {
  console.log("Starting");
- try {
-	 console.log(process.env.TESTVALUE);
- }
- catch(e){}
   const server = express()
   console.log("Server init");
   server.options('*', cors()) 
@@ -22,7 +18,6 @@ function runServer(handle, port) {
 server.route('/ticketing/*').all(function (req, res) {
     // runs for all HTTP verbs first
     // think of it as route specific middleware!
-    
     return ticketing(req,res);
   })
   
@@ -45,12 +40,4 @@ server.route('/api*').all(function (req, res) {
     if (err) throw err
     console.log('> Ready on http://localhost:' + port);
   })
-}
-
-export const Utils = {
-	...utils
-}
-
-export const RunServer = (handle, port) => {
-	return () => runServer(handle, port);
 }
