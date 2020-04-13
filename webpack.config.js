@@ -8,5 +8,8 @@ module.exports = {
 	module: true,
     filename: '[name].js',
     path: __dirname + '/dist'
-  }
+  },
+  node: {
+  net: 'empty',
+},
 };
