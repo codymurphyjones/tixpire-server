@@ -7,8 +7,5 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: __dirname + '/dist'
-  },
-  node: {
-  net: 'empty',
-},
+  }
 };
