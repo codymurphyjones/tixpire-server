@@ -2,8 +2,8 @@
   "name": "tixpire-server",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/main.js",
-  "module": "dist/main.js",
+  "main": "index.js",
+  "module": "index.js",
   "scripts": {
     "transpile": "babel ./src/ --out-dir dist",
     "build": "npm-run-all clean transpile",

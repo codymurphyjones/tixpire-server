@@ -11,19 +11,13 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var express = require('express'); //const next = require('next')
-
-
-var cors = require('cors');
-
-var dev = process.env.NODE_ENV !== 'production';
-
-var api = require("./api");
-
-var ticketing = require("./ticketing");
-
-var bodyParser = require('body-parser');
-
+/*const express = require('express')
+//const next = require('next')
+const cors = require('cors')
+const dev = process.env.NODE_ENV !== 'production'
+const api = require("./api");
+const ticketing = require("./ticketing");
+const bodyParser = require('body-parser');*/
 var utils = require('./utils');
 
 var runServer = require("./runServer.js");
