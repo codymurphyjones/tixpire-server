@@ -1,12 +1,14 @@
-const {firestore} = require("../utils/firebase")
+const {firestore} = require("tixpire-api")
 
 module.exports = function webhook(res,req) {
 	try {
     let product = firestore.collection("webhooks").doc();
     product.set(req.body)
+	
 	}
-	catch {}
+	catch {} finally {
 				
-	res.json("Webhooks")
+	res.send("Webhooks")
+	}
 
 }

@@ -1,10 +1,9 @@
-const Hubspot = require('hubspot')
-const hubspot = new Hubspot({
-  apiKey: '73c6c801-b156-412a-8041-91fd93699507',
-  checkLimit: false // (Optional) Specify whether to check the API limit on each call. Default: true
-})
+const {getPartners} = require("../utils/hubspot")
 const webhook = require("./webhook");
-
+/*const hubspot = test.Hubspot;
+console.log(hubspot);
+console.log(test);
+/*
 
 function getPartners(res,value=[],hasMore = false, offset = 0) {
 	hubspot.companies.get({hasMore, offset, properties: ["name","type"]})
@@ -31,7 +30,7 @@ function getPartners(res,value=[],hasMore = false, offset = 0) {
   		.catch(err => {
     		console.error(err)
 		  })
-}
+}*/
 
 const Main = (req,res) => {
 
@@ -47,7 +46,6 @@ const Main = (req,res) => {
 		default:
 			res.send("API call is invalid")
 		break;
-
 	}
 	
 	return { req, res }

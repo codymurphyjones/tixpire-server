@@ -7,10 +7,9 @@
   "scripts": {
     "transpile": "babel ./src/ --out-dir dist",
     "build": "npm-run-all clean transpile",
-    "server": "node ./src/test.js $PORT",
+    "server": "node ./test.js $PORT",
     "dev": "npm-run-all build server",
-    "clean": "rimraf dist",
-	"test": "babel src -d dist"
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",
@@ -42,7 +41,8 @@
   "babel": {
     "presets": [
       "@babel/preset-env"
-    ]
+    ],
+	"plugins": ["add-module-exports"]
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
