@@ -22,6 +22,7 @@
     "babel-loader": "^8.1.0"
   },
   "dependencies": {
+    "babel-plugin-add-module-exports": "^1.0.2",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -34,7 +35,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rimraf": "^3.0.2",
-    "babel-plugin-add-module-exports": "^1.0.2",
+    "tixpire-api": "git+https://e1852eabba5e327c1d025ca2452e11b1a0604948:x-oauth-basic@github.com/Tixpire/tixpire-api.git",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
@@ -42,7 +43,9 @@
     "presets": [
       "@babel/preset-env"
     ],
-	"plugins": ["add-module-exports"]
+    "plugins": [
+      "add-module-exports"
+    ]
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
