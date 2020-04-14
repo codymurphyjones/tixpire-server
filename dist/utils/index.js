@@ -28,4 +28,3 @@ var _default = _objectSpread({
 }, firebase);
 
 exports["default"] = _default;
-module.exports = exports.default;

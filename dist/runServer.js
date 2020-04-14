@@ -1,5 +1,5 @@
 "use strict";
-console.log("Im here");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -53,5 +53,3 @@ function runServer(handle, port) {
     console.log('> Ready on http://localhost:' + port);
   });
 }
-
-module.exports = exports.default;

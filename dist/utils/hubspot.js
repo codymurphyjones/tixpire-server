@@ -16,4 +16,3 @@ var hubspot = new _hubspot["default"]({
 });
 var _default = hubspot;
 exports["default"] = _default;
-module.exports = exports.default;

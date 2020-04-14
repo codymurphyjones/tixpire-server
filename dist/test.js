@@ -3,10 +3,10 @@
 var port = process.argv[2].replace("$PORT", "3000");
 console.log("meeeee");
 
-var _require = require("../"),
-    server = _require.server;
+var _require = require("../dist"),
+    RunServer = _require.RunServer;
 
-console.log(server);
+console.log(RunServer);
 
 function handler(req, res) {
   res.send("Success");
@@ -16,4 +16,4 @@ function handler(req, res) {
   };
 }
 
-server(handler, port)();
+RunServer(handler, port)();

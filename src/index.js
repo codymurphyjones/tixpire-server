@@ -5,8 +5,8 @@ const dev = process.env.NODE_ENV !== 'production'
 const api = require("./api");
 const ticketing = require("./ticketing");
 const bodyParser = require('body-parser');*/
-const utils = require('./utils');
-const runServer = require("./runServer.js");
+import utils from './utils';
+import runServer from  "./runServer.js";
 /*
 function runServer(handle, port) {
  console.log("Starting");
